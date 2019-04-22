@@ -54,3 +54,14 @@ class Owns_Contact_Number(models.Model):
     contact_id = models.ForeignKey('ContactNumber', on_delete=models.PROTECT)
 
     status = models.IntegerField()
+
+class BusinessInfo(models.Model):
+
+    class Meta:
+        db_table = 'BusinessInfo'
+
+    id = models.CharField(max_length=64, primary_key=True)
+
+    name = models.CharField(max_length=16)
+
+    value = models.CharField(max_length=16)
