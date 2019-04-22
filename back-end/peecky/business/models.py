@@ -164,3 +164,10 @@ class Reservable(models.Model):
         db_table = 'Reservable'
 
     id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True)
+
+class Hotel(models.Model):
+
+    class Meta:
+        db_table = 'Hotel'
+
+    id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True) 
