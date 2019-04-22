@@ -150,3 +150,10 @@ class Restaurant(models.Model):
         db_table = 'Restaurant'
 
     id = models.OneToOneField( 'FoodRelated', on_delete=models.PROTECT, primary_key=True)
+
+class CoffeeShop(models.Model):
+
+    class Meta:
+        db_table = 'Coffee_Shop'
+
+    id = models.OneToOneField( 'FoodRelated', on_delete=models.PROTECT, primary_key=True)
