@@ -132,3 +132,14 @@ class Menu(models.Model):
     id = models.CharField(max_length=64, primary_key=True)
 
     title = models.CharField(max_length=16)
+
+class MenuHasItem(models.Model):
+
+    class Meta:
+        db_table = 'Menu_Hash_Item'
+
+    id = models.CharField(max_length=64, primary_key=True)
+
+    item_id = models.ForeignKey('MenuItem', on_delete=models.CASCADE)
+    
+    menu_id = models.ForeignKey('Menu', on_delete=models.CASCADE)
