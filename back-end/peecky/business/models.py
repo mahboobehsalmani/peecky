@@ -8,10 +8,10 @@ class Business(models.Model):
         db_table = 'Business'
 
     #primary key
-    id = models.CharField(max_length=64, primary_key=True, blank=False, null=False)
+    id = models.CharField(max_length=64, primary_key=True)
 
     #name of the business
-    name = models.CharField(max_length=32, blank=False)
+    name = models.CharField(max_length=32)
 
     #website of the business
     website = models.CharField(max_length=32, blank=True, null=True)
@@ -37,7 +37,20 @@ class ContactNumber(models.Model):
         db_table = 'ContactNumber'
 
     #primary key
-    id = models.CharField(max_length=64, primary_key=True, blank=False, null=False)
+    id = models.CharField(max_length=64, primary_key=True)
 
     #contact number
-    number = models.CharField(max_length=16, blank=False, null=False)
+    number = models.CharField(max_length=16)
+
+class Owns_Contact_Number(models.Model):
+
+    class Meta:
+        db_table = 'Owns_Contact_Number'
+    
+    id = models.CharField(max_length=64, primary_key=True)
+
+    business_id = models.ForeignKey('Business', on_delete=models.PROTECT)
+
+    contact_id = models.ForeignKey('ContactNumber', on_delete=models.PROTECT)
+
+    status = models.IntegerField()
