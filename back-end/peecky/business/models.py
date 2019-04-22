@@ -94,3 +94,14 @@ class Day(models.Model):
         db_table = 'Day'
     
     id = models.CharField(max_length=64, primary_key=True)
+
+class HasOpeningHour(models.Model):
+
+    class Meta:
+        db_table = 'Has_Opening_Hour'
+    
+    id = models.CharField(max_length=64, primary_key=True)
+
+    day = models.ForeignKey('Day', on_delete=models.CASCADE)
+
+    opening_hour = models.ForeignKey('Interval', on_delete=models.CASCADE)
