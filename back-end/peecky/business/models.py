@@ -105,3 +105,11 @@ class HasOpeningHour(models.Model):
     day = models.ForeignKey('Day', on_delete=models.CASCADE)
 
     opening_hour = models.ForeignKey('Interval', on_delete=models.CASCADE)
+
+class FoodRelated(models.Model):
+
+    class Meta:
+        db_table = 'Food_Related'
+
+    id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True)
+
