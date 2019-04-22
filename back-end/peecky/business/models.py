@@ -87,3 +87,10 @@ class Interval(models.Model):
     from_time = models.CharField(max_length=8)
 
     till_time = models.CharField(max_length=8)
+
+class Day(models.Model):
+
+    class Meta:
+        db_table = 'Day'
+    
+    id = models.CharField(max_length=64, primary_key=True)
