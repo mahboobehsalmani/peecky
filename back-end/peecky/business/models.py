@@ -123,3 +123,12 @@ class MenuItem(models.Model):
     name = models.CharField(max_length=32)
     
     price = models.CharField(max_length=32)
+
+class Menu(models.Model):
+
+    class Meta:
+        db_table = 'Menu'
+
+    id = models.CharField(max_length=64, primary_key=True)
+
+    title = models.CharField(max_length=16)
