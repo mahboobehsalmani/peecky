@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Business(models.Model):
 
     #meta data about the model
@@ -9,7 +8,7 @@ class Business(models.Model):
         db_table = 'Business'
 
     #primary key
-    id = models.CharField(max_length=64, primary_key=True, blank=False)
+    id = models.CharField(max_length=64, primary_key=True, blank=False, null=False)
 
     #name of the business
     name = models.CharField(max_length=32, blank=False)
@@ -30,3 +29,15 @@ class Business(models.Model):
     longitude = models.CharField(max_length=16, blank=True, null=True)
 
     status = models.IntegerField()
+
+
+class ContactNumber(models.Model):
+
+    class Meta:
+        db_table = 'ContactNumber'
+
+    #primary key
+    id = models.CharField(max_length=64, primary_key=True, blank=False, null=False)
+
+    #contact number
+    number = models.CharField(max_length=16, blank=False, null=False)
