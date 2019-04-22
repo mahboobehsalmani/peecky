@@ -143,3 +143,10 @@ class MenuHasItem(models.Model):
     item_id = models.ForeignKey('MenuItem', on_delete=models.CASCADE)
     
     menu_id = models.ForeignKey('Menu', on_delete=models.CASCADE)
+
+class Restaurant(models.Model):
+
+    class Meta:
+        db_table = 'Restaurant'
+
+    id = models.OneToOneField( 'FoodRelated', on_delete=models.PROTECT, primary_key=True)
