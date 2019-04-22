@@ -186,3 +186,14 @@ class ReservableItem(models.Model):
     till_time = models.CharField(max_length=8)
 
     status = models.IntegerField()
+
+class HasReservableItem(models.Model):
+
+    class Meta:
+        db_table = 'Has_Reservable_Item'
+
+    id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True)
+
+    business_id = models.ForeignKey('Reservable', on_delete=models.PROTECT)
+
+    reservable_id = models.ForeignKey('ReservableItem', on_delete=models.CASCADE)
