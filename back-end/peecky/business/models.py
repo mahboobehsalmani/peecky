@@ -113,3 +113,13 @@ class FoodRelated(models.Model):
 
     id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True)
 
+class MenuItem(models.Model):
+
+    class Meta:
+        db_table = 'Menu_Item'
+
+    id = models.CharField(max_length=64, primary_key=True)
+
+    name = models.CharField(max_length=32)
+    
+    price = models.CharField(max_length=32)
