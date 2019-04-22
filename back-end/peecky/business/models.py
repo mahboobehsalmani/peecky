@@ -34,7 +34,7 @@ class Business(models.Model):
 class ContactNumber(models.Model):
 
     class Meta:
-        db_table = 'ContactNumber'
+        db_table = 'Contact_Number'
 
     #primary key
     id = models.CharField(max_length=64, primary_key=True)
@@ -58,10 +58,32 @@ class Owns_Contact_Number(models.Model):
 class BusinessInfo(models.Model):
 
     class Meta:
-        db_table = 'BusinessInfo'
+        db_table = 'Business_Info'
 
     id = models.CharField(max_length=64, primary_key=True)
 
     name = models.CharField(max_length=16)
 
     value = models.CharField(max_length=16)
+
+class Has_Business_Info(models.Model):
+
+    class Meta:
+        db_table = 'Has_Business_Info'
+    
+    id = models.CharField(max_length=64, primary_key=True)
+
+    info_id = models.ForeignKey('BusinessInfo', on_delete=models.CASCADE)
+
+    business_id = models.ForeignKey('Business', on_delete=models.PROTECT)
+    
+class Interval(models.Model):
+
+    class Meta:
+        db_table = 'Interval'
+
+    id = models.CharField(max_length=64, primary_key=True)
+
+    from_time = models.CharField(max_length=8)
+
+    till_time = models.CharField(max_length=8)
