@@ -157,3 +157,10 @@ class CoffeeShop(models.Model):
         db_table = 'Coffee_Shop'
 
     id = models.OneToOneField( 'FoodRelated', on_delete=models.PROTECT, primary_key=True)
+
+class Reservable(models.Model):
+
+    class Meta:
+        db_table = 'Reservable'
+
+    id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True)
