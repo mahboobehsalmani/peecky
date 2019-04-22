@@ -170,4 +170,19 @@ class Hotel(models.Model):
     class Meta:
         db_table = 'Hotel'
 
-    id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True) 
+    id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True)
+
+class ReservableItem(models.Model):
+
+    class Meta:
+        db_table = 'Reservable_Item'
+
+    id = models.OneToOneField( 'Business', on_delete=models.PROTECT, primary_key=True)
+
+    name = models.CharField(max_length=16)
+
+    from_time = models.CharField(max_length=8)
+
+    till_time = models.CharField(max_length=8)
+
+    status = models.IntegerField()
