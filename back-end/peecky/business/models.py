@@ -198,9 +198,4 @@ class HasReservableItem(models.Model):
 
     reservable_id = models.ForeignKey('ReservableItem', on_delete=models.CASCADE)
 
-class Contact_Number(models.Model):
 
-    class Meta:
-        db_table = 'Contact_Number'
-        
-    number = models.CharField(max_lenght=16)
