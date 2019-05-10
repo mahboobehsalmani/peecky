@@ -1,0 +1,38 @@
+/**** mahboobeh salmani ****/
+
+
+.Head {
+    background-image: url("../../assets/images/pizza-header.jpg");
+    background-size: cover;
+    display: block;
+    position: fixed;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    align-content: center;
+    max-width:100%;
+    height: 400px;
+    display: flex;
+    flex-flow: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 56px;
+    
+
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 415px){
+        .Head{
+            height: 200px;
+
+            
+        }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    
+}
+

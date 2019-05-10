@@ -1,0 +1,25 @@
+/* **** mahboobeh salmani **** */
+
+.SingleItem {
+    margin: 0;
+    width: 100px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    align-content: center;
+
+}
+
+
+.SingleItem img {
+    height: 30px;
+
+}
+.SingleItem p {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+
+
+}

@@ -1,0 +1,60 @@
+/* **** mahboobeh salmani **** */
+
+.btn {
+    background-color: #fdfdfd;
+    border-color: #7a0000;
+    border-width: 3px;
+    border-style: solid;
+    /* border-left-width: 1.5px; */
+    width: 120px;
+    height: 120px;
+    padding: 5px 5px;
+}
+
+.btn img {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn p {
+    size: 24px;
+    color: #7a0000;
+    font-size: 18px;
+    
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 415px){
+
+    
+.btn {
+    border-width: 2px;
+    width: 80px;
+    height: 80px;
+    
+}
+
+.btn img {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+.btn p {
+    color: #7a0000;
+    font-size: 12px;
+    
+}
+
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+}
